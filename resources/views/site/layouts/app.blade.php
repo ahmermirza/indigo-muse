@@ -59,10 +59,10 @@
         </div>
         <div class="offcanvas__nav__option">
             <a href="#" class="search-switch"><img src="{{ asset('img/icon/search.png') }}" alt=""></a>
-            <a href="@if (auth()->user()) {{ route('favourite') }}@else{{ route('login') }} @endif"><img
-                    src="{{ asset('img/icon/heart.png') }}" alt=""></a>
+            <a href="@if (auth()->user()) {{ route('profile.edit') }}@else{{ route('login') }} @endif"
+                class="text-dark h5"><i class="fa fa-user"></i></a>
             <a href="#"><img src="{{ asset('img/icon/cart.png') }}" alt=""> <span>0</span></a>
-            <div class="price">$0.00</div>
+            <div class="price">${{ \Cart::getTotal(); }}</div>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__text">
@@ -130,11 +130,11 @@
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="{{ asset('img/icon/search.png') }}"
                                 alt=""></a>
-                        <a href="@if (auth()->user()) {{ route('favourite') }}@else{{ route('login') }} @endif"
+                        <a href="@if (auth()->user()) {{ route('profile.edit') }}@else{{ route('login') }} @endif"
                             class="text-dark h5"><i class="fa fa-user"></i></a>
                         <a href="#"><img src="{{ asset('img/icon/cart.png') }}"
                                 alt=""><span>0</span></a>
-                        <div class="price">$0.00</div>
+                        <div class="price">${{ \Cart::getTotal(); }}</div>
                     </div>
                 </div>
             </div>
