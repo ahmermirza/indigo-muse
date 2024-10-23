@@ -22,6 +22,9 @@ Route::get('favourite', [SiteController::class, 'favourite'])->name('favourite')
 Route::get('contact-us', [SiteController::class, 'contactUs'])->name('contact-us');
 // Route::get('/{param}', [SiteController::class, 'index'])->name('home');
 
+Route::get('shop', [SiteController::class, 'shop'])->name('shop');
+Route::get('product/{slug}', [SiteController::class, 'productDetails'])->name('product-details');
+
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart.index');
 Route::post('/cart/add/{id}', [CartController::class, 'addToCart'])->name('cart.add');
 Route::post('/cart/remove/{id}', [CartController::class, 'removeCartItem'])->name('cart.remove');

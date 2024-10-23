@@ -111,7 +111,7 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li class="active"><a href="{{ route('home') }}">Home</a></li>
-                            <li><a href="./shop.html">Shop</a></li>
+                            <li><a href="{{ route('shop') }}">Shop</a></li>
                             {{-- <li><a href="#">Pages</a>
                                 <ul class="dropdown ml-3 ml-lg-0">
                                     <li><a href="./about.html">About Us</a></li>
