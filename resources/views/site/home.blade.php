@@ -442,7 +442,7 @@
     <!-- Categories Section End -->
 
     <!-- Instagram Section Begin -->
-    <section class="instagram spad">
+    <section class="spad pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -470,7 +470,7 @@
     <!-- Instagram Section End -->
 
     <!-- Latest Blog Section Begin -->
-    <section class="latest spad">
+    {{-- <section class="latest spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -513,6 +513,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Latest Blog Section End -->
 @endsection
