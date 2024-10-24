@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendOrderConfirmation;
 use Illuminate\Http\Request;
 use Srmklive\PayPal\Services\PayPal as PayPalClient;
 use App\Models\Order;
@@ -73,6 +74,7 @@ class CheckoutController extends Controller
                 ]);
             }
 
+            dispatch(new SendOrderConfirmation($order));
             \Cart::clear(); // Clear the cart after placing the order
 
             return redirect()->route('order.success')->with('success', 'Order placed successfully!');

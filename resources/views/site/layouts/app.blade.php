@@ -61,7 +61,7 @@
             <a href="#" class="search-switch"><img src="{{ asset('img/icon/search.png') }}" alt=""></a>
             <a href="@if (auth()->user()) {{ route('profile.edit') }}@else{{ route('login') }} @endif"
                 class="text-dark h5"><i class="fa fa-user"></i></a>
-            <a href="#"><img src="{{ asset('img/icon/cart.png') }}" alt=""> <span>0</span></a>
+            <a href="#"><img src="{{ asset('img/icon/cart.png') }}" alt=""> <span>{{ \Cart::getTotalQuantity() }}</span></a>
             <div class="price">${{ \Cart::getTotal(); }}</div>
         </div>
         <div id="mobile-menu-wrap"></div>
@@ -121,7 +121,7 @@
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li> --}}
-                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="#">Blog</a></li>
                             <li><a href="{{ route('contact-us') }}">Contacts</a></li>
                         </ul>
                     </nav>
@@ -133,7 +133,7 @@
                         <a href="@if (auth()->user()) {{ route('profile.edit') }}@else{{ route('login') }} @endif"
                             class="text-dark h5"><i class="fa fa-user"></i></a>
                         <a href="#"><img src="{{ asset('img/icon/cart.png') }}"
-                                alt=""><span>0</span></a>
+                                alt=""><span>{{ \Cart::getTotalQuantity() }}</span></a>
                         <div class="price">${{ \Cart::getTotal(); }}</div>
                     </div>
                 </div>

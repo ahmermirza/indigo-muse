@@ -15,7 +15,7 @@ class SiteController extends Controller
 
     public function shop(Request $request)
     {
-        $products = Product::query();
+        $products = Product::query()->with('category');
         $categories = Category::all();
 
         // Handle the price filter

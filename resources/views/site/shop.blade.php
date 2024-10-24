@@ -188,7 +188,7 @@
                         @foreach ($products as $product)
                             <div class="col-lg-4 col-md-6 col-sm-6" onclick="viewProduct('{{ $product->slug }}');">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+                                    <div class="product__item__pic set-bg" data-setbg="img/product/product-9.jpg">
                                         <ul class="product__hover">
                                             <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                             {{-- <li><a href="#"><img src="img/icon/compare.png" alt=""><span>Compare</span></a></li> --}}

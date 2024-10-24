@@ -10,6 +10,9 @@ class CartController extends Controller
 {
     public function addToCart(Request $request, $id)
     {
+        $this->validate($request, [
+            'quantity' => 'required|integer',
+        ]);
         $product = Product::findOrFail($id);
 
         \Cart::add(array(
@@ -21,7 +24,7 @@ class CartController extends Controller
             'associatedModel' => $product
         ));
 
-        return redirect()->route('cart.index')->with('success', 'Product added to cart.');
+        return redirect()->back()->with('success', 'Product added to cart.');
     }
 
     public function showCart()
@@ -34,6 +37,6 @@ class CartController extends Controller
     public function removeCartItem($id)
     {
         \Cart::remove($id);
-        return redirect()->route('cart.index')->with('success', 'Item removed.');
+        return redirect()->route('cart.index')->with('success', 'Item removed from the cart.');
     }
 }

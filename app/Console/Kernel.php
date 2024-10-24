@@ -13,6 +13,12 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
+        
+        $schedule->call(function () {
+            \DB::table('products')
+                ->where('sale_end', '<', now())
+                ->update(['on_sale' => 0]);
+        })->daily();
     }
 
     /**

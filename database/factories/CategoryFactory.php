@@ -23,7 +23,7 @@ class CategoryFactory extends Factory
         return [
             'name' => $this->faker->word,
             'slug' => function (array $attributes) {
-                return Str::slug($attributes['name']);
+                return Str::slug($attributes['name']) . '-' . Str::random(5);
             },
             'description' => $this->faker->sentence,
             'parent_id' => Category::inRandomOrder()->first()->id ?? null,  // This will randomly assign an existing category as the parent or set null
