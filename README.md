@@ -113,6 +113,6 @@ The Laravel framework used to create this project is open-sourced software licen
 
 ## Screenshots
 
-<p align="center"><img src="img/read-me-ss/ss1.png"></p></br>
-<p align="center"><img src="img/read-me-ss/ss2.png"></p></br>
-<p align="center"><img src="img/read-me-ss/ss3.png"></p>
+<p align="center"><img src="{{ asset('img/read-me-ss/ss1.png') }}" width="400"></p></br>
+<p align="center"><img src="{{ asset('img/read-me-ss/ss2.png') }}" width="400"></p></br>
+<p align="center"><img src="{{ asset('img/read-me-ss/ss3.png') }}" width="400"></p>
