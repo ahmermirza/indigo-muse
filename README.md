@@ -110,9 +110,3 @@ Integration with popular payment gateway i.e. PayPal.
 ## License
 
 The Laravel framework used to create this project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-## Screenshots
-
-<p align="center"><img src="{{ asset('img/read-me-ss/ss1.png') }}" width="400"></p></br>
-<p align="center"><img src="{{ asset('img/read-me-ss/ss2.png') }}" width="400"></p></br>
-<p align="center"><img src="{{ asset('img/read-me-ss/ss3.png') }}" width="400"></p>
